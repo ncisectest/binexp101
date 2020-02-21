@@ -5,7 +5,10 @@ int target_01;
 int target_02 = 0xdeadbeef;
 
 void win_fn() {
-  system("/bin/sh");
+  char *name[2];
+  name[0] = "/bin/sh";
+  name[1] = NULL;
+  execve(name[0], name, NULL);
 }
 
 void test_01() {
@@ -41,14 +44,14 @@ void test_03() {
 }
 
 int main(int argc, char **argv, char **envp) {
-  puts("Calling function: test_01");
-  test_01();
-  putchar('\n');
+  //puts("Calling function: test_01");
+  //test_01();
+  //putchar('\n');
   puts("Calling function: test_02");
   test_02();
   putchar('\n');
-  puts("Calling function: test_03");
-  test_03();
-  putchar('\n');
+  //puts("Calling function: test_03");
+  //test_03();
+  //putchar('\n');
   return 0;
 }
