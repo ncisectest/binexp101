@@ -9,6 +9,8 @@ apt-get install -y python3-pip
 apt-get install -y python3-dev
 apt-get install -y python3-setuptools
 apt-get install -y python3-wheel
+apt-get install -y openjdk-11-jre-headless
+apt-get install -y openjdk-11-jdk-headless
 pip3 install ropper
 pip3 install --upgrade git+https://github.com/arthaud/python3-pwntools.git
 wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
