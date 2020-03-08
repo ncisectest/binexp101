@@ -15,3 +15,4 @@ wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
 snap install --classic atom
 apt-get install -y radare2
 ulimit -c unlimited
+echo "kernel.randomize_va_space" > /etc/sysctl.d/000-labsetup.conf
